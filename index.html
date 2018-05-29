@@ -218,6 +218,7 @@ _.forEach(wavesurfers, function(wavesurfer) {
 function playSequence() {
 var wavesurfer = wavesurfers[playIndex];
 $(wavesurfer.container).css('visibility', 'visible');
+$(wavesurfer.command).css('visibility', 'hidden');
 wavesurfer.play();
 
 wavesurfer.on('finish', function() {
@@ -256,7 +257,7 @@ wavesurfer.on('finish', function() {
   <div class="waveform" id="waveform4"></div>
   <div class="waveform" id="waveform5"></div>
   <div class="waveform" id="waveform6"></div>
-	<br /><br />[HIT ME AND WAIT]
+	  <br /><br /><span class="command">[PRESS ME AND WAIT]</span>
 	
   </div>
 	
