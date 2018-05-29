@@ -94,8 +94,8 @@ div.angrytext {
  width:300px;
  margin:90px auto;
 
- -webkit-animation: alert 5s linear 0s 3 normal ;
- animation: alert 5s linear 0s 3 normal ;
+ -webkit-animation: alert 5s linear 0s infinite normal ;
+ animation: alert 5s linear 0s infinite normal ;
 }
 
 @-webkit-keyframes alert {
@@ -244,7 +244,8 @@ function playSequence() {
 var wavesurfer = wavesurfers[playIndex];
 $(wavesurfer.container).css('visibility', 'visible');
 $("p").css('display', 'none');
-$(".lds-spinner").css('display', 'none');	
+$(".lds-spinner").css('display', 'none');
+$( "div" ).removeClass( "angrytext" );
 wavesurfer.play();
 
 wavesurfer.on('finish', function() {
@@ -270,7 +271,7 @@ wavesurfer.on('finish', function() {
 <div class="bgimg">
 
   <div class="middle">
-  <div class='angrytext' >VESTIBULE</div>
+  <div class='angrytext'>VESTIBULE</div>
 	</div>
 
 
