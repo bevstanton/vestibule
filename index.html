@@ -247,7 +247,6 @@ $(wavesurfer.container).css('visibility', 'visible');
 $("p").css('display', 'none');
 $(".lds-spinner").css('display', 'none');
 $( "div" ).removeClass( "angrytext" );
-$( "p" ).removeClass( "toggle" );
 wavesurfer.play();
 
 wavesurfer.on('finish', function() {
@@ -285,11 +284,11 @@ wavesurfer.on('finish', function() {
   <div class="waveform" id="waveform4"></div>
   <div class="waveform" id="waveform5"></div>
   <div class="waveform" id="waveform6"></div>
-	  <p id="toggle">[ PRESS TO HEAR SOUND AFTER IT LOADS ]</p>
+	  <p>[ PLAY AFTER LOAD ]</p>
  
 <script>
-$( document ).click(function() {
-  $( "#toggle" ).toggle( "pulsate" );
+$( "p" ).click(function() {
+  $( "p" ).fadeOut( "slow" );
 });
 </script>
 	  
