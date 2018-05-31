@@ -95,8 +95,8 @@ hr {
 div.angrytext {
 
 
- -webkit-animation: alert 5s linear 0s infinite normal ;
- animation: alert 5s linear 0s infinite normal ;
+ -webkit-animation: alert 5s linear 0s 3 normal ;
+ animation: alert 5s linear 0s 3 normal ;
 }
 
 @-webkit-keyframes alert {
@@ -193,80 +193,7 @@ div.angrytext {
   }
 }
 </style>
-<script>
-(function() {
-var wavesurfers, // The list of wavesurfer instances to work with.
-readyCount = 0, // The number of wavesurfer instances that have reported as being ready.
-playIndex = 0; // The index of the currently playing wavesurfer instance.
 
-$(document).ready(function() {
-// Build our instances and associated an audio file with them.
-wavesurfers = [
-  createWavesurfer('#waveform1', '/mp3s/FEELINGALIVE.mp3'),
-  createWavesurfer('#waveform2', '/mp3s/DREAMING.mp3'),
-  createWavesurfer('#waveform3', '/mp3s/WANNAFINDLOVE.mp3'),
-  createWavesurfer('#waveform4', '/mp3s/LOOKAWAY.mp3'),
-  createWavesurfer('#waveform5', '/mp3s/ATTHEEND.mp3'),
-  createWavesurfer('#waveform6', '/mp3s/LEFTBEHIND.mp3')
-];
-
-// After we have created all instances, listen to the "ready" event to update the ready count.
-assignReadyEvents();
-});
-
-function createWavesurfer(selector, url) {
-var wavesurfer = WaveSurfer.create({
-  container: selector,
-  waveColor: 'white',
-  progressColor: 'violet'
-});
-
-wavesurfer.load(url);
-return wavesurfer;
-}
-
-function assignReadyEvents() {
-_.forEach(wavesurfers, function(wavesurfer) {
-  wavesurfer.on('ready', function() {
-    readyCount++;
-
-    // Once all instances are ready, begin sequential playback.
-    if (readyCount === wavesurfers.length) {
-      playSequence();
-    }
-
-    // Clean up.
-    wavesurfer.un('ready');
-  });
-});
-}
-
-function playSequence() {
-var wavesurfer = wavesurfers[playIndex];
-$(wavesurfer.container).css('visibility', 'visible');
-$("p").css('display', 'none');
-$(".lds-spinner").css('display', 'none');
-$( "div" ).removeClass( "angrytext" );
-wavesurfer.play();
-
-wavesurfer.on('finish', function() {
-  $(wavesurfer.container).css('visibility', 'hidden');
-
-  // Clean up.
-  wavesurfer.un('finish');
-
-  // Play the next instance after a 200ms delay.
-  setTimeout(function() {
-    playIndex++;
-
-    if (playIndex < wavesurfers.length) {
-      playSequence();
-    }
-  }, 200);
-});
-}
-}());
-</script>
 <body>
 
 <div class="bgimg">
@@ -279,22 +206,8 @@ wavesurfer.on('finish', function() {
     
 
   <div class="container">
-	  <!--
-  <div class="waveform" id="waveform1"></div>
-  <div class="waveform" id="waveform2"></div>
-  <div class="waveform" id="waveform3"></div>
-  <div class="waveform" id="waveform4"></div>
-  <div class="waveform" id="waveform5"></div>
-  <div class="waveform" id="waveform6"></div>
-	  <p>[ THE WAV IS COMING. CLICK IT. ]</p>
- 
-<script>
-$( "p" ).click(function() {
-  $( "p" ).fadeOut( "slow" );
-});
-</script>-->
-	  <iframe scrolling="no" id="hearthis_at_user_93744-5786719" width="100%" height="150" src="https://hearthis.at/set/93744-5786719/embed/jev4B/" frameborder="0" allowtransparency></iframe>
-	  
+	 
+	 <iframe scrolling="no" id="hearthis_at_user_" width="100%" height="150" src="https://hearthis.at/set/93744-5786719/embed/jev4B/?hcolor=b81175&autoplay=0&css=" frameborder="0" allowtransparency></iframe>
 	
   </div>
 	
