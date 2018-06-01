@@ -8,3 +8,5 @@ ul.playlist li.black .headline .roof, ul.playlist li.black .headline .roof a, ul
 ul.playlist li .player-link {margin-top: 7px;}
 .privacy {visibility: hidden;}
 body:after {background: transparent !important}
+body {
+    background: transparent !important;}
