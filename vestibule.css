@@ -1,6 +1,7 @@
 .fullwidth ul.playlist li.with-image, ul.playlist.top li.with-image {
     margin-left: 10px;
 }
-body, .ajaxloader {font-family: "Courier New", Courier, monospace}
+body {font-family: "Courier New", Courier, monospace}
 ul.playlist li .headline  {font-family: "Courier New", Courier, monospace}
 ul.playlist li .cover {display: none;}
+.ajaxloader {visibility: hidden;}
