@@ -4,5 +4,6 @@
 body {font-family: "Courier New", Courier, monospace}
 ul.playlist li .headline  {font-family: "Courier New", Courier, monospace}
 ul.playlist li .cover {display: none;}
-span.roof {display: none !important;}
+ul.playlist li.black .headline .roof, ul.playlist li.black .headline .roof a, ul.playlist li.black .headline .roof span {display: none !important;}
 ul.playlist li .player-link {margin-top: 5px;}
+.privacy {display: none;}
